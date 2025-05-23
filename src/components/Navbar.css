@@ -8,8 +8,10 @@
 [data-theme="dark"] .active {
     border-bottom: 2px solid #2090D3;
     color: white;
-    box-shadow: 1px 0.5px 1px #2090D3;
+    box-shadow: 2px 2px 2px #2090D3;
     font-weight: bold;
+    background-color: #96C362;
+
 }
 
 /* @media (prefers-color-scheme: dark) {

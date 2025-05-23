@@ -27,18 +27,18 @@ const Navbar = () => {
     }
 
     const links = <>
-        <li><NavLink to="/" className="dark:text-yellow-50">Home</NavLink></li>
-        <li><NavLink to="/find-roommate" >Add to Find Roommate</NavLink></li>
-        <li><NavLink to="/browse-listing" >Browse Listing</NavLink></li>
-        <li><NavLink to="/my-listings" >My Listings</NavLink></li>
-        <button onClick={handleThemeChange} className='btn btn-primary'>Toggle Theme</button>
+        <li><NavLink to="/" className="dark:bg-secondary dark:text-white">Home</NavLink></li>
+        <li><NavLink to="/find-roommate" className="dark:bg-secondary dark:text-white">Add to Find Roommate</NavLink></li>
+        <li><NavLink to="/browse-listing" className="dark:bg-secondary dark:text-white">Browse Listing</NavLink></li>
+        <li><NavLink to="/my-listings" className="dark:bg-secondary dark:text-white">My Listings</NavLink></li>
+        <button onClick={handleThemeChange} className='btn btn-primary text-white'>Toggle Theme</button>
     </>
 
     return (
         <div className="navbar bg-base-100 p-0 flex justify-between">
             <div className="">
                 <div className="dropdown">
-                    <div tabIndex={0} role="button" className="btn btn-ghost md:hidden px-0 mr-2">
+                    <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden px-0 mr-2">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
                     </div>
                     <ul
