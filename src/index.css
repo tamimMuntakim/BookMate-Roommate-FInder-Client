@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import "tailwindcss";
+@plugin "daisyui";
+
+@plugin "daisyui/theme" {
+  name: "light";
+  --color-primary: #96C362;
+  --color-secondary: #2090D3;
+  --color-third: #F4665C
+  --color-accent: #6B96D6;
+}
+
+@plugin "daisyui/theme" {
+  name: "dark";
+  --color-primary: #96C362;
+  --color-secondary: #2090D3;
+  --color-third: #F4665C
+  --color-accent: #6B96D6;
+}
+
+* {
+  font-family: "Mulish", sans-serif;
+}

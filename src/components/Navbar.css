@@ -1,0 +1,22 @@
+.active {
+    border-bottom: 2px solid #2090D3;
+    color: #2090D3;
+    box-shadow: 1px 0.5px 1px #2090D3;
+    font-weight: bold;
+}
+
+[data-theme="dark"] .active {
+    border-bottom: 2px solid #2090D3;
+    color: white;
+    box-shadow: 1px 0.5px 1px #2090D3;
+    font-weight: bold;
+}
+
+/* @media (prefers-color-scheme: dark) {
+    .active {
+        border-bottom: 2px solid #6B96D6;
+        color: #ffffff;
+        box-shadow: 1px 0.5px 1px #6B96D6;
+        font-weight: bold;
+    }
+} */
