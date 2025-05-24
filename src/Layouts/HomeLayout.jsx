@@ -6,10 +6,10 @@ import Footer from '../components/Footer';
 const HomeLayout = () => {
     return (
         <>
-            <header className='w-11/12 md:container mx-auto sticky top-0 z-50'>
+            <header className='w-full sticky top-0 z-50 bg-base-200 shadow-md'>
                 <Navbar></Navbar>
             </header>
-            <main className='w-11/12 md:container mx-auto'>
+            <main className='w-11/12 md:container mx-auto mt-4 md:mt-6'>
                 <Outlet></Outlet>
             </main>
             <footer>
