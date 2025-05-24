@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Sliders from '../components/Sliders';
 import FeaturedPosts from '../components/FeaturedPosts';
 import PlatformStatistics from '../components/PlatformStatistics';
+import Faq from '../components/Faq';
 
 const Home = () => {
     const [posts, setPosts] = useState([]);
@@ -23,6 +24,9 @@ const Home = () => {
             </section>
             <section id="platform-statistics" className='mt-7 md:mt-14'>
                 <PlatformStatistics></PlatformStatistics>
+            </section>
+            <section id="faq" className='mt-7 md:mt-14 mb-7 md:mb-14'>
+                <Faq></Faq>
             </section>
         </>
     );
