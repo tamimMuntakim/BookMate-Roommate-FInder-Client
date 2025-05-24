@@ -60,7 +60,7 @@ const Login = () => {
 
     return (
         <div className="flex justify-center mt-8 items-center">
-            {/* <title>SuperSUB || Login</title> */}
+            <title>BookMate || Login</title>
             <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl pt-5 border border-slate-200">
                 <h2 className="font-semibold text-lg md:text-2xl text-center">
                     Login your account

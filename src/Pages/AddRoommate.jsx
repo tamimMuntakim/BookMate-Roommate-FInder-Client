@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { use } from 'react';
 import Swal from 'sweetalert2';
+import { AuthContext } from '../Providers/AuthProvider';
 
 const AddRoommate = () => {
+
+    const {user} = use(AuthContext);
 
     const handleAddSubmit = (e) => {
         e.preventDefault();
@@ -37,6 +40,7 @@ const AddRoommate = () => {
 
     return (
         <div>
+            <title>BookMate || Add Roommate</title>
             <h1 className='mt-5 mb-3 text-2xl md:mt-8 md:mb-6 md:text-4xl font-bold text-primary text-center'>New Roommate Details</h1>
             <p className='mb-3 md:mb-6 text-center'>Add new roommate details to help others find suitable roomate easily</p>
             <div className='bg-base-200 border-base-300 rounded-box border mb-3 md:mb-6'>
@@ -79,11 +83,11 @@ const AddRoommate = () => {
                     </div>
                     <div className='flex flex-col gap-2 md:text-base w-full'>
                         <label className="label font-semibold dark:text-white">User Email<span className='text-red-400'>*</span> </label>
-                        <input type="text" className="input w-full dark:text-white" value="userEmail" readOnly name="userEmail" />
+                        <input type="text" className="input w-full dark:text-white" value={user.email} readOnly name="userEmail" />
                     </div>
                     <div className='flex flex-col gap-2 md:text-base w-full'>
                         <label className="label font-semibold dark:text-white">User Name<span className='text-red-400'>*</span> </label>
-                        <input type="text" className="input w-full dark:text-white" value="userName" readOnly name="userName" />
+                        <input type="text" className="input w-full dark:text-white" value={user.displayName} readOnly name="userName" />
                     </div>
                     <button type='submit' className='btn btn-secondary w-full font-bold text-white mt-4 md:col-span-2'>Add</button>
                 </form>

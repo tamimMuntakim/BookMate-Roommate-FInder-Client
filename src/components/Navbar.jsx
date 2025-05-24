@@ -3,6 +3,7 @@ import { Link, NavLink } from 'react-router';
 import "./Navbar.css"
 import { AuthContext } from '../Providers/AuthProvider';
 import Swal from 'sweetalert2';
+import { Tooltip } from 'react-tooltip'
 
 const Navbar = () => {
     const { user, logOut } = use(AuthContext);
@@ -78,13 +79,14 @@ const Navbar = () => {
                 {user ?
                     (
                         <>
-                            <div className="tooltip tooltip-bottom" data-tip={user.displayName}>
+                            <a data-tooltip-id="my-tooltip" data-tooltip-content={user.displayName}>
                                 <div className="avatar avatar-online">
                                     <div className="w-7 md:w-9 rounded-full">
                                         <img src={user.photoURL} />
                                     </div>
                                 </div>
-                            </div>
+                            </a>
+                            <Tooltip id="my-tooltip" />
                             <button onClick={handleLogout} className='btn btn-secondary text-white btn-sm md:btn-md md:font-bold md:w-[120px] '>Logout</button>
                         </>)
                     :

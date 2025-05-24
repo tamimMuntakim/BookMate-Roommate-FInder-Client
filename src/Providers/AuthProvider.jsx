@@ -39,14 +39,8 @@ const AuthProvider = ({ children }) => {
             displayName: name, photoURL: photo,
         })
             .then(() => {
-                // toast.success("Successfully Updated Prtofile!", {
-                //     autoClose: 1500,
-                // });
                 setLoading(false);
             }).catch(() => {
-                // toast.error("Update Failed!", {
-                //     autoClose: 1500,
-                // });
                 setLoading(false);
 
             });
@@ -55,7 +49,6 @@ const AuthProvider = ({ children }) => {
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
             setUser(currentUser);
-            console.log(currentUser);
             setLoading(false);
         });
         return () => {
