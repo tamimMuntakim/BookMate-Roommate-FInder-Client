@@ -25,7 +25,7 @@ const Faq = () => {
                     <div className="collapse-title font-semibold">Can I visit the place in person before confirming the booking?</div>
                     <div className="collapse-content text-sm">Yes! We encourage in-person visits through our platform but for a limited number of times depending on the current tenants.</div>
                 </div>
-                <div className="collapse collapse-arrow join-item border-base-300 border">
+                <div className="collapse collapse-arrow join-item border-slate-300 border-b-2 dark:border-b-1">
                     <input type="radio" name="my-accordion-4" />
                     <div className="collapse-title font-semibold">Does we have hidden charges at the end ?</div>
                     <div className="collapse-content text-sm">Nope. We provide completely charge-free and middleman-free service using out platform.</div>

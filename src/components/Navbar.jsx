@@ -1,8 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React, { use, useEffect, useState } from 'react';
 import { Link, NavLink } from 'react-router';
 import "./Navbar.css"
+import { AuthContext } from '../Providers/AuthProvider';
+import Swal from 'sweetalert2';
 
 const Navbar = () => {
+    const { user, logOut } = use(AuthContext);
     const [theme, setTheme] = useState("");
 
     useEffect(() => {
@@ -24,6 +27,23 @@ const Navbar = () => {
         const newSavedTheme = (theme === "light" ? "dark" : "light");
         localStorage.setItem("savedTheme", newSavedTheme);
         setTheme(newSavedTheme);
+    }
+
+    const handleLogout = () => {
+        logOut()
+            .then(() => {
+                Swal.fire({
+                    icon: "success",
+                    title: "Successfully Logged out!!",
+                    timer: 1500
+                });
+            }).catch(() => {
+                Swal.fire({
+                    icon: "error",
+                    title: "Please try again !!",
+                    timer: 1500
+                });
+            });
     }
 
     const links = <>
@@ -55,24 +75,23 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="flex gap-2 md:gap-4 items-center">
-                {/* {user ?
+                {user ?
                     (
                         <>
-                            <div className="tooltip tooltip-bottom" data-tip="Helo">
+                            <div className="tooltip tooltip-bottom" data-tip={user.displayName}>
                                 <div className="avatar avatar-online">
-                                    <div className="w-6 md:w-8 rounded-full">
-                                        <img src="" />
+                                    <div className="w-7 md:w-9 rounded-full">
+                                        <img src={user.photoURL} />
                                     </div>
                                 </div>
                             </div>
-                            <button onClick={handleLogout} className='btn btn-primary text-white btn-sm md:btn-md md:font-bold md:w-[120px] '>Logout</button>
+                            <button onClick={handleLogout} className='btn btn-secondary text-white btn-sm md:btn-md md:font-bold md:w-[120px] '>Logout</button>
                         </>)
                     :
-                }(
-                ) 
-                 */}
-
-                <Link to="/auth/login" className='btn btn-primary text-white btn-sm md:btn-md md:font-bold md:w-[120px] '>Login</Link>
+                    (
+                        <Link to="/auth/login" className='btn btn-primary text-white btn-sm md:btn-md md:font-bold md:w-[120px] '>Login</Link>
+                    )
+                }
             </div >
         </nav >
     );

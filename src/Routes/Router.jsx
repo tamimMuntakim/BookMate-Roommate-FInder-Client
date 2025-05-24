@@ -10,6 +10,10 @@ import MyListings from "../Pages/MyListings";
 import AddRoommate from "../Pages/AddRoommate";
 import Loader from "../components/Loader";
 import RoommateDetails from "../Pages/RoommateDetails";
+import AuthLayout from "../Layouts/AuthLayout";
+import Login from "../Pages/Login";
+import Register from "../Pages/Register";
+import PrivateRoute from "../Providers/PrivateRoute";
 
 const router = createBrowserRouter([
     {
@@ -22,7 +26,9 @@ const router = createBrowserRouter([
             },
             {
                 path: "/add-roommate",
-                element: <AddRoommate></AddRoommate>,
+                element: <PrivateRoute>
+                    <AddRoommate></AddRoommate>,
+                </PrivateRoute>
             },
             {
                 path: "/browse-listing",
@@ -30,13 +36,31 @@ const router = createBrowserRouter([
             },
             {
                 path: "/my-listings",
-                element: <MyListings></MyListings>,
+                element: <PrivateRoute>
+                    <MyListings></MyListings>
+                </PrivateRoute>,
             },
             {
                 path: "/roommate-details/:id",
                 loader: ({ params }) => fetch(`http://localhost:3000/roommates/${params.id}`),
-                element: <RoommateDetails></RoommateDetails>,
+                element: <PrivateRoute>
+                    <RoommateDetails></RoommateDetails>
+                </PrivateRoute>,
                 hydrateFallbackElement: <Loader></Loader>,
+            },
+        ]
+    },
+    {
+        path: "/auth",
+        element: <AuthLayout></AuthLayout>,
+        children: [
+            {
+                path: "/auth/login",
+                element: <Login></Login>,
+            },
+            {
+                path: "/auth/register",
+                element: <Register></Register>,
             },
         ]
     },
