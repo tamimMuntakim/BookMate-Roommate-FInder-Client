@@ -35,7 +35,7 @@ const Navbar = () => {
     </>
 
     return (
-        <div className="navbar bg-base-100 p-0 flex justify-between">
+        <nav className="navbar bg-base-100 p-0 flex justify-between">
             <div className="">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden px-0 mr-2">
@@ -74,7 +74,7 @@ const Navbar = () => {
 
                 <Link to="/auth/login" className='btn btn-primary text-white btn-sm md:btn-md md:font-bold md:w-[120px] '>Login</Link>
             </div >
-        </div >
+        </nav >
     );
 
 };

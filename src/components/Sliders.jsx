@@ -41,7 +41,7 @@ const Sliders = () => {
     ]
 
     return (
-        <div className="w-full h-full relative">
+        <div className="w-full h-full relative mt-4 md:mt-2">
             <Swiper
                 modules={[Navigation, Pagination, Autoplay]}
                 spaceBetween={0}

@@ -9,7 +9,7 @@ const AddRoommate = () => {
         const newRoommate = Object.fromEntries(formData.entries());
         newRoommate.likeCount = 0;
         console.log(newRoommate);
-        fetch("http://localhost:3000/roommate", {
+        fetch("http://localhost:3000/roommates", {
             method: "POST",
             headers: {
                 "content-type": "application/json",
