@@ -5,9 +5,9 @@ import {
 import ErrorPage from "../Pages/ErrorPage";
 import HomeLayout from "../Layouts/HomeLayout";
 import Home from "../Pages/Home";
-import FindRoommate from "../Pages/FindRoommate";
 import BrowseListing from "../Pages/BrowseListing";
 import MyListings from "../Pages/MyListings";
+import AddRoommate from "../Pages/AddRoommate";
 
 const router = createBrowserRouter([
     {
@@ -19,8 +19,8 @@ const router = createBrowserRouter([
                 element: <Home></Home>,
             },
             {
-                path: "/find-roommate",
-                element: <FindRoommate></FindRoommate>,
+                path: "/add-roommate",
+                element: <AddRoommate></AddRoommate>,
             },
             {
                 path: "/browse-listing",

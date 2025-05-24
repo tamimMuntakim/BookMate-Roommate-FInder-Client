@@ -11,7 +11,7 @@ const Footer = () => {
                 <Link to="/" className="text-lg md:text-2xl px-0 text-primary font-bold flex items-center"><img src="https://img.icons8.com/stickers/100/neighbour.png" alt="roommate" className='w-[30px] md:w-[50px] h-auto' />Book<p className='-ml-1 text-secondary '>Mate</p></Link>
                 <nav className="flex flex-col md:flex-row gap-2 md:gap-8">
                     <Link className="link link-hover" to="/">Home</Link>
-                    <Link className="link link-hover" to="/find-roommate" >Add to Find Roommate</Link>
+                    <Link className="link link-hover" to="/add-roommate" >Add to Find Roommate</Link>
                     <Link className="link link-hover" to="/browse-listing" >Browse Listing</Link>
                     <Link className="link link-hover" to="/my-listings" >My Listings</Link>
                 </nav>

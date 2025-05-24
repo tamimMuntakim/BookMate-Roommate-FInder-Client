@@ -28,7 +28,7 @@ const Navbar = () => {
 
     const links = <>
         <li><NavLink to="/" className="dark:bg-secondary dark:text-white">Home</NavLink></li>
-        <li><NavLink to="/find-roommate" className="dark:bg-secondary dark:text-white">Add to Find Roommate</NavLink></li>
+        <li><NavLink to="/add-roommate" className="dark:bg-secondary dark:text-white">Add to Find Roommate</NavLink></li>
         <li><NavLink to="/browse-listing" className="dark:bg-secondary dark:text-white">Browse Listing</NavLink></li>
         <li><NavLink to="/my-listings" className="dark:bg-secondary dark:text-white">My Listings</NavLink></li>
         <button onClick={handleThemeChange} className='btn btn-primary text-white'>Toggle Theme</button>
