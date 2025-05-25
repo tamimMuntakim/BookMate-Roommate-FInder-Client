@@ -4,6 +4,8 @@ import "./Navbar.css"
 import { AuthContext } from '../Providers/AuthProvider';
 import Swal from 'sweetalert2';
 import { Tooltip } from 'react-tooltip'
+import { IoSunny } from "react-icons/io5";
+import { FaMoon } from "react-icons/fa6";
 
 const Navbar = () => {
     const { user, logOut } = use(AuthContext);
@@ -52,7 +54,6 @@ const Navbar = () => {
         <li><NavLink to="/add-roommate" className="dark:bg-secondary dark:text-white">Add to Find Roommate</NavLink></li>
         <li><NavLink to="/browse-listing" className="dark:bg-secondary dark:text-white">Browse Listing</NavLink></li>
         <li><NavLink to="/my-listings" className="dark:bg-secondary dark:text-white">My Listings</NavLink></li>
-        <button onClick={handleThemeChange} className='btn btn-primary text-white'>Toggle Theme</button>
     </>
 
     return (
@@ -68,7 +69,7 @@ const Navbar = () => {
                         {links}
                     </ul>
                 </div>
-                <Link to="/" className="btn btn-ghost text-lg md:text-2xl px-0 text-primary font-bold"><img src="https://img.icons8.com/stickers/100/neighbour.png" alt="roommate" className='w-[30px] md:w-[50px] h-auto' />Book<p className='-ml-1 text-secondary '>Mate</p></Link>
+                <Link to="/" className="btn btn-ghost text-lg md:text-2xl px-0 text-primary font-bold"><img src="https://img.icons8.com/stickers/100/neighbour.png" alt="roommate" className='w-[30px] md:w-[50px] h-auto hidden md:inline' />Book<p className='-ml-1 text-secondary '>Mate</p></Link>
             </div>
             <div className="hidden lg:flex">
                 <ul className="menu menu-horizontal px-1 gap-3 items-center">
@@ -76,6 +77,12 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="flex gap-2 md:gap-4 items-center">
+                {
+                    (theme === "light")?
+                    <IoSunny className='w-[15px] h-auto md:w-[20px] text-amber-500 mr-2 md:mr-4' onClick={handleThemeChange}/>
+                    :
+                    <FaMoon className='w-[15px] h-auto md:w-[20px] rotate-y-180 text-white mr-2 md:mr-4' onClick={handleThemeChange}/>
+                }
                 {user ?
                     (
                         <>
