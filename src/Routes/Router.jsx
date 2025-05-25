@@ -14,6 +14,7 @@ import AuthLayout from "../Layouts/AuthLayout";
 import Login from "../Pages/Login";
 import Register from "../Pages/Register";
 import PrivateRoute from "../Providers/PrivateRoute";
+import UpdatePostDetails from "../Pages/UpdatePostDetails";
 
 const router = createBrowserRouter([
     {
@@ -38,15 +39,25 @@ const router = createBrowserRouter([
             },
             {
                 path: "/my-listings",
+                loader: () => fetch("http://localhost:3000/roommates/"),
                 element: <PrivateRoute>
                     <MyListings></MyListings>
                 </PrivateRoute>,
+                hydrateFallbackElement: <Loader></Loader>,
             },
             {
                 path: "/roommate-details/:id",
                 loader: ({ params }) => fetch(`http://localhost:3000/roommates/${params.id}`),
                 element: <PrivateRoute>
                     <RoommateDetails></RoommateDetails>
+                </PrivateRoute>,
+                hydrateFallbackElement: <Loader></Loader>,
+            },
+            {
+                path: "/update-details/:id",
+                loader: ({ params }) => fetch(`http://localhost:3000/roommates/${params.id}`),
+                element: <PrivateRoute>
+                    <UpdatePostDetails></UpdatePostDetails>
                 </PrivateRoute>,
                 hydrateFallbackElement: <Loader></Loader>,
             },

@@ -13,8 +13,8 @@ const BrowseListing = () => {
         <div>
             <title>BookMate || Browse Listing</title>
             <h1 className='mt-5 mb-3 text-2xl md:mt-8 md:mb-6 md:text-4xl font-bold text-secondary text-center'>Browse Listings</h1>
-            <p className='mb-3 md:mb-6 text-center'>Add new roommate details to help others find suitable roomate easily</p>
-            <div className="overflow-x-auto rounded-box border border-slate-200 bg-base-100 mb-8">
+            <p className='mb-3 md:mb-6 text-center'>See all roommate posts below</p>
+            <div className="overflow-x-auto rounded-box border border-slate-200 bg-base-100 mb-8 ">
                 <table className="table table-zebra">
                     <thead>
                         <tr className='border-b border-b-slate-400 text-xs md:text-sm'>
