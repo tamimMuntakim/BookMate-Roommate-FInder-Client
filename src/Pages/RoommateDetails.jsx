@@ -20,7 +20,7 @@ const RoommateDetails = () => {
             body: JSON.stringify({ likeCount: `${likes + 1}` }),
         })
             .then(result => result.json())
-            .then(data => {
+            .then(() => {
                 setLikes(likes + 1);
                 setUserLiked(true);
             });
