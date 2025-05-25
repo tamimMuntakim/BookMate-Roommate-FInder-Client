@@ -3,6 +3,7 @@ import Sliders from '../components/Sliders';
 import FeaturedPosts from '../components/FeaturedPosts';
 import PlatformStatistics from '../components/PlatformStatistics';
 import Faq from '../components/Faq';
+import { Typewriter } from 'react-simple-typewriter'
 
 const Home = () => {
     const [posts, setPosts] = useState([]);
@@ -10,12 +11,21 @@ const Home = () => {
         fetch("http://localhost:3000/roommates")
             .then(result => result.json())
             .then(data => {
-                setPosts(data.slice(0,6));
+                setPosts(data.slice(0, 6));
             })
     }, []);
 
     return (
         <>
+            <h1 className='text-center text-3xl md:text-5xl my-3 md:my-6'><span className='text-secondary font-bold'>
+            <Typewriter
+                words={['Browse', 'Find', 'Contact']}
+                loop={0}
+                cursorStyle='_'
+                typeSpeed={100}
+                deleteSpeed={50}
+                delaySpeed={1000}
+            /></span> Your Next Roommate</h1>
             <section id="sliders">
                 <Sliders></Sliders>
             </section>
