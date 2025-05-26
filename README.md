@@ -1,12 +1,100 @@
-# React + Vite
+# BookMate || Find Your Roommate
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern web application for finding and listing roommates, built with React and Firebase.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Live Demo
 
-## Expanding the ESLint configuration
+Check the live demo: [BookMate || Find Your Roommate](https://assignment10-tamim-bookmate.web.app/)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## ✨ Features
+
+- 🔒 **Authentication:** Secure login and registration using Firebase Authentication.
+- 🏠 **Browse Listings:** View all available roommate listings with detailed information.
+- ➕ **Add Roommate:** Authenticated users can add new roommate listings.
+- 📝 **My Listings:** View, update, and delete your own roommate posts.
+- 👀 **Roommate Details:** See detailed information for each listing.
+- 🌗 **Dark Mode:** Switch between light and dark themes.
+- ⚡ **Loading States:** Smooth user experience with loading indicators.
+- 🛡️ **Protected Routes:** Only authenticated users can add, edit, or delete listings.
+
+---
+
+## 🛠️ Getting Started
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) (v16 or higher recommended)
+- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
+- [Firebase Project](https://firebase.google.com/) (for authentication)
+
+### Installation
+
+1. **Install dependencies:**
+    ```bash
+    npm install
+    # or
+    yarn install
+    ```
+
+2. **Set up Firebase:**
+    - Create a `.env` file in the root directory.
+    - Add your Firebase config:
+      ```
+      VITE_FIREBASE_API_KEY=your_api_key
+      VITE_FIREBASE_AUTH_DOMAIN=your_auth_domain
+      VITE_FIREBASE_PROJECT_ID=your_project_id
+      VITE_FIREBASE_APP_ID=your_app_id
+      ```
+
+3. **Start the development server:**
+    ```bash
+    npm run dev
+    # or
+    yarn dev
+    ```
+
+4. **Open in your browser:**
+    ```
+    http://localhost:5173
+    ```
+
+---
+
+## 📁 Project Structure
+
+```
+src/
+│
+├── assets/             
+├── components/
+├── Contexts/
+├── Firebase/
+├── Layouts/                     
+├── Pages/         
+├── Providers/          
+└── Routes/            
+```
+
+---
+
+## 🧑‍💻 Tech Stack
+
+- **Frontend:** React, React Router DOM, Tailwind CSS, DaisyUI
+- **Authentication:** Firebase Authentication
+- **Database:** MongoDB
+- **Backend API:** Node.js/Express (hosted on Vercel)
+- **Icons:** React Icons
+- **Alerts:** SweetAlert2
+- **Deployment:** Vercel, Firebase
+
+---
+
+## 📄 License
+
+This project was only done for learning purpose.
+
+---
