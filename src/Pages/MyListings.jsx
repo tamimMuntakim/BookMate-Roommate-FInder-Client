@@ -27,7 +27,7 @@ const MyListings = () => {
             confirmButtonText: "Yes, delete it!"
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:3000/roommates/${id}`, {
+                fetch(`https://b11-assn-10-orange-book-mate-server.vercel.app/roommates/${id}`, {
                     method: "DELETE",
                 })
                     .then((result) => result.json())

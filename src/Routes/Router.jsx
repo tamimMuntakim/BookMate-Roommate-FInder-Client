@@ -33,13 +33,13 @@ const router = createBrowserRouter([
             },
             {
                 path: "/browse-listing",
-                loader: () => fetch("http://localhost:3000/roommates/"),
+                loader: () => fetch("https://b11-assn-10-orange-book-mate-server.vercel.app/roommates/"),
                 element: <BrowseListing></BrowseListing>,
                 hydrateFallbackElement: <Loader></Loader>,
             },
             {
                 path: "/my-listings",
-                loader: () => fetch("http://localhost:3000/roommates/"),
+                loader: () => fetch("https://b11-assn-10-orange-book-mate-server.vercel.app/roommates/"),
                 element: <PrivateRoute>
                     <MyListings></MyListings>
                 </PrivateRoute>,
@@ -47,7 +47,7 @@ const router = createBrowserRouter([
             },
             {
                 path: "/roommate-details/:id",
-                loader: ({ params }) => fetch(`http://localhost:3000/roommates/${params.id}`),
+                loader: ({ params }) => fetch(`https://b11-assn-10-orange-book-mate-server.vercel.app/roommates/${params.id}`),
                 element: <PrivateRoute>
                     <RoommateDetails></RoommateDetails>
                 </PrivateRoute>,
@@ -55,7 +55,7 @@ const router = createBrowserRouter([
             },
             {
                 path: "/update-details/:id",
-                loader: ({ params }) => fetch(`http://localhost:3000/roommates/${params.id}`),
+                loader: ({ params }) => fetch(`https://b11-assn-10-orange-book-mate-server.vercel.app/roommates/${params.id}`),
                 element: <PrivateRoute>
                     <UpdatePostDetails></UpdatePostDetails>
                 </PrivateRoute>,

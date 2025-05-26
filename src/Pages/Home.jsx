@@ -8,7 +8,7 @@ import { Typewriter } from 'react-simple-typewriter'
 const Home = () => {
     const [posts, setPosts] = useState([]);
     useEffect(() => {
-        fetch("http://localhost:3000/roommates")
+        fetch("https://b11-assn-10-orange-book-mate-server.vercel.app/roommates")
             .then(result => result.json())
             .then(data => {
                 setPosts(data.slice(0, 6));

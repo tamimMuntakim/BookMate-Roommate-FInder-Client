@@ -12,7 +12,7 @@ const RoommateDetails = () => {
     const { user } = use(AuthContext);
 
     const handleLike = () => {
-        fetch(`http://localhost:3000/roommates/${_id}`, {
+        fetch(`https://b11-assn-10-orange-book-mate-server.vercel.app/roommates/${_id}`, {
             method: "PATCH",
             headers: {
                 "content-type": "application/json",

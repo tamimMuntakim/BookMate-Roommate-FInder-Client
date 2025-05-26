@@ -4,7 +4,7 @@ import { AuthContext } from '../Providers/AuthProvider';
 
 const AddRoommate = () => {
 
-    const {user} = use(AuthContext);
+    const { user } = use(AuthContext);
 
     const handleAddSubmit = (e) => {
         e.preventDefault();
@@ -12,7 +12,7 @@ const AddRoommate = () => {
         const newRoommate = Object.fromEntries(formData.entries());
         newRoommate.likeCount = 0;
         console.log(newRoommate);
-        fetch("http://localhost:3000/roommates", {
+        fetch("https://b11-assn-10-orange-book-mate-server.vercel.app/roommates", {
             method: "POST",
             headers: {
                 "content-type": "application/json",
@@ -28,7 +28,7 @@ const AddRoommate = () => {
                         timer: 1500
                     });
                     e.target.reset();
-                }else{
+                } else {
                     Swal.fire({
                         icon: "error",
                         title: "Please try again later!!",

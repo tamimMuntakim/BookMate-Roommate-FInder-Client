@@ -12,7 +12,7 @@ const UpdatePostDetails = () => {
         const updatedRoommate = Object.fromEntries(formData.entries());
         updatedRoommate.likeCount = likeCount;
         console.log(updatedRoommate);
-        fetch(`http://localhost:3000/roommates/${_id}`, {
+        fetch(`https://b11-assn-10-orange-book-mate-server.vercel.app/roommates/${_id}`, {
                     method: "PUT",
                     headers: {
                         "content-type": "application/json",
